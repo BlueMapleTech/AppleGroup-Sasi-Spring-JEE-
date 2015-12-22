@@ -1,0 +1,337 @@
+-- MySQL dump 10.13  Distrib 5.6.23, for Win32 (x86)
+--
+-- Host: localhost    Database: ticket_reservation
+-- ------------------------------------------------------
+-- Server version	5.6.24-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `movie`
+--
+
+DROP TABLE IF EXISTS `movie`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `movie` (
+  `movie_id` int(11) NOT NULL AUTO_INCREMENT,
+  `movie_name` varchar(45) NOT NULL,
+  `release_date` datetime DEFAULT NULL,
+  `no_of_shows` int(11) DEFAULT NULL,
+  `created_date` datetime DEFAULT NULL,
+  `updated_date` datetime DEFAULT NULL,
+  `active` tinyint(4) NOT NULL DEFAULT '1',
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  PRIMARY KEY (`movie_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `movie`
+--
+
+LOCK TABLES `movie` WRITE;
+/*!40000 ALTER TABLE `movie` DISABLE KEYS */;
+INSERT INTO `movie` VALUES (1,'hhhhhhhh','2016-02-01 00:00:00',3,NULL,NULL,1,NULL,NULL),(2,'haldurai','2016-04-03 00:00:00',3,NULL,NULL,1,NULL,NULL),(3,'kathi','2012-12-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(4,'saamy','0001-01-16 00:00:00',3,NULL,NULL,1,NULL,NULL),(5,'sakthi','2012-12-15 00:00:00',2,NULL,NULL,1,NULL,NULL),(6,'don','0001-01-15 00:00:00',4,NULL,NULL,1,NULL,NULL),(7,'kamal','0008-09-15 00:00:00',2,NULL,NULL,1,NULL,NULL),(8,'guru','2023-12-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(9,'vettai','2023-12-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(10,'sandai','2030-11-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(11,'sillunu oru kadhal','0002-11-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(12,'sillunu oru kadhal','0002-11-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(13,'sillunu oru kadhal','0002-11-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(14,'sillunu oru kadhal','0002-11-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(15,'sillunu oru kadhal','0002-11-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(16,'ssss','0002-11-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(17,'ssss','0002-11-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(18,'ssss','0002-11-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(19,'ssss','0002-11-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(20,'wwwww','0002-11-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(21,'wwwww','0002-11-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(22,'wwwww','0002-11-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(23,'wwwww','0002-11-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(24,'wwwww','0002-11-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(25,'wwwww','0002-11-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(26,'tttt','0002-11-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(27,'maari','0002-11-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(28,'maari','0002-11-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(29,'maari','0002-11-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(30,'pooja','0002-11-15 00:00:00',2,NULL,NULL,1,NULL,NULL),(31,'poojai','0002-11-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(32,'asa','0002-11-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(33,'wwww','0002-03-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(34,'oooooo','0002-03-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(35,'rrrrrrr','0002-03-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(36,'jjjj','0002-03-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(37,'jjjj','0002-03-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(38,'ppp','0002-03-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(39,'vvvv','0002-03-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(40,'kkkkk','0002-03-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(41,'zzzzz','0002-03-15 00:00:00',3,NULL,NULL,1,NULL,NULL),(42,'nnnnnn','2015-01-02 00:00:00',3,NULL,NULL,1,NULL,NULL),(43,'vvvvvv','2015-12-01 00:00:00',3,NULL,NULL,1,NULL,NULL),(44,'aaaa','2015-12-31 00:00:00',3,NULL,NULL,1,NULL,NULL),(45,'ggggg','2015-12-31 00:00:00',3,NULL,NULL,1,NULL,NULL),(46,'sdfg','2015-10-31 00:00:00',3,NULL,NULL,1,NULL,NULL),(47,'ccccc','2016-09-02 00:00:00',3,NULL,NULL,1,NULL,NULL),(48,'ccccc','2015-12-29 00:00:00',3,NULL,NULL,1,NULL,NULL),(49,'aaaa','2015-08-27 00:00:00',3,NULL,NULL,1,NULL,NULL),(50,'iiiii','2015-09-28 00:00:00',4,NULL,NULL,1,NULL,NULL),(51,'pandi','2013-10-29 00:00:00',3,NULL,NULL,1,NULL,NULL);
+/*!40000 ALTER TABLE `movie` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `movies_list_has_timings`
+--
+
+DROP TABLE IF EXISTS `movies_list_has_timings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `movies_list_has_timings` (
+  `movie_id` int(11) NOT NULL,
+  `timings_id` int(11) NOT NULL,
+  KEY `fk_movies_list_has_timings_timings1_idx` (`timings_id`),
+  KEY `fk_movies_list_has_timings_movies_list1_idx` (`movie_id`),
+  CONSTRAINT `fk_movies_list_has_timings_movies_list1` FOREIGN KEY (`movie_id`) REFERENCES `movie` (`movie_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_movies_list_has_timings_timings1` FOREIGN KEY (`timings_id`) REFERENCES `timings` (`timings_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `movies_list_has_timings`
+--
+
+LOCK TABLES `movies_list_has_timings` WRITE;
+/*!40000 ALTER TABLE `movies_list_has_timings` DISABLE KEYS */;
+INSERT INTO `movies_list_has_timings` VALUES (35,1),(35,2),(35,3),(35,4),(36,1),(36,2),(36,3),(38,1),(38,2),(38,3),(39,1),(39,2),(39,3),(40,1),(40,2),(40,3),(41,1),(41,2),(41,3),(42,1),(42,2),(42,3),(43,1),(43,2),(43,3),(44,1),(44,2),(44,3),(45,1),(45,2),(45,3),(46,1),(46,2),(46,3),(47,1),(47,2),(47,3),(48,1),(48,2),(48,3),(50,1),(50,2),(50,3),(50,4),(1,1),(1,2),(1,3),(1,4),(1,1),(1,2),(1,3),(1,4),(2,1),(2,2),(2,3),(51,1),(51,2),(51,3),(51,1),(51,2),(51,3);
+/*!40000 ALTER TABLE `movies_list_has_timings` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `reservation`
+--
+
+DROP TABLE IF EXISTS `reservation`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `reservation` (
+  `reservation_id` int(11) NOT NULL,
+  `reservation_count` int(11) NOT NULL DEFAULT '1',
+  `reservation_date` datetime DEFAULT NULL,
+  `created_date` datetime DEFAULT NULL,
+  `updated_date` datetime DEFAULT NULL,
+  `reservation_status` int(11) NOT NULL,
+  `reserved_by` int(11) NOT NULL,
+  `movie_id` int(11) NOT NULL,
+  `timings_id` int(11) NOT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  PRIMARY KEY (`reservation_id`),
+  KEY `fk_reservation_reservation_status1_idx` (`reservation_status`),
+  KEY `fk_reservation_user1_idx` (`reserved_by`),
+  KEY `fk_reservation_movie1_idx` (`movie_id`),
+  KEY `fk_reservation_timings1_idx` (`timings_id`),
+  CONSTRAINT `fk_reservation_movie1` FOREIGN KEY (`movie_id`) REFERENCES `movie` (`movie_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_reservation_reservation_status1` FOREIGN KEY (`reservation_status`) REFERENCES `reservation_status` (`reservation_status_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_reservation_timings1` FOREIGN KEY (`timings_id`) REFERENCES `timings` (`timings_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_reservation_user1` FOREIGN KEY (`reserved_by`) REFERENCES `user` (`user_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `reservation`
+--
+
+LOCK TABLES `reservation` WRITE;
+/*!40000 ALTER TABLE `reservation` DISABLE KEYS */;
+/*!40000 ALTER TABLE `reservation` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `reservation_status`
+--
+
+DROP TABLE IF EXISTS `reservation_status`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `reservation_status` (
+  `reservation_status_id` int(11) NOT NULL AUTO_INCREMENT,
+  `reservation_status` varchar(45) NOT NULL,
+  `reservation_status_desc` varchar(250) DEFAULT NULL,
+  `created_date` datetime DEFAULT NULL,
+  `updated_date` datetime DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  PRIMARY KEY (`reservation_status_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `reservation_status`
+--
+
+LOCK TABLES `reservation_status` WRITE;
+/*!40000 ALTER TABLE `reservation_status` DISABLE KEYS */;
+/*!40000 ALTER TABLE `reservation_status` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `reserved_seat`
+--
+
+DROP TABLE IF EXISTS `reserved_seat`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `reserved_seat` (
+  `reserved_seat_id` int(11) NOT NULL AUTO_INCREMENT,
+  `reserved_seat_no` varchar(45) NOT NULL,
+  `reservation_id` int(11) NOT NULL,
+  PRIMARY KEY (`reserved_seat_id`),
+  KEY `fk_reserved_seat_reservation1_idx` (`reservation_id`),
+  CONSTRAINT `fk_reserved_seat_reservation1` FOREIGN KEY (`reservation_id`) REFERENCES `reservation` (`reservation_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `reserved_seat`
+--
+
+LOCK TABLES `reserved_seat` WRITE;
+/*!40000 ALTER TABLE `reserved_seat` DISABLE KEYS */;
+/*!40000 ALTER TABLE `reserved_seat` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ticket_rate`
+--
+
+DROP TABLE IF EXISTS `ticket_rate`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ticket_rate` (
+  `ticket_rate_id` int(11) NOT NULL AUTO_INCREMENT,
+  `ticket_rate` float DEFAULT NULL,
+  `created_date` datetime DEFAULT NULL,
+  `updated_date` datetime DEFAULT NULL,
+  `movie_id` int(11) NOT NULL,
+  `ticket_type` int(11) NOT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  PRIMARY KEY (`ticket_rate_id`),
+  KEY `fk_ticket_rates_movies_list1_idx` (`movie_id`),
+  KEY `fk_ticket_rate_ticket_type1_idx` (`ticket_type`),
+  CONSTRAINT `fk_ticket_rate_ticket_type1` FOREIGN KEY (`ticket_type`) REFERENCES `ticket_type` (`ticket_type_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_ticket_rates_movies_list1` FOREIGN KEY (`movie_id`) REFERENCES `movie` (`movie_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ticket_rate`
+--
+
+LOCK TABLES `ticket_rate` WRITE;
+/*!40000 ALTER TABLE `ticket_rate` DISABLE KEYS */;
+INSERT INTO `ticket_rate` VALUES (1,100,NULL,NULL,40,1,NULL,NULL),(2,0,NULL,NULL,40,2,NULL,NULL),(3,150,NULL,NULL,41,1,NULL,NULL),(4,100,NULL,NULL,41,2,NULL,NULL),(5,150,NULL,NULL,42,1,NULL,NULL),(6,100,NULL,NULL,42,2,NULL,NULL),(7,150,NULL,NULL,43,1,NULL,NULL),(8,100,NULL,NULL,43,2,NULL,NULL),(9,150,NULL,NULL,44,1,NULL,NULL),(10,100,NULL,NULL,44,2,NULL,NULL),(11,150,NULL,NULL,45,1,NULL,NULL),(12,100,NULL,NULL,45,2,NULL,NULL),(13,150,NULL,NULL,46,1,NULL,NULL),(14,100,NULL,NULL,46,2,NULL,NULL),(15,150,NULL,NULL,47,1,NULL,NULL),(16,100,NULL,NULL,47,2,NULL,NULL),(17,150,NULL,NULL,48,1,NULL,NULL),(18,100,NULL,NULL,48,2,NULL,NULL),(19,150,NULL,NULL,50,1,NULL,NULL),(20,100,NULL,NULL,50,2,NULL,NULL),(21,150,NULL,NULL,1,1,NULL,NULL),(22,100,NULL,NULL,1,2,NULL,NULL),(23,150,NULL,NULL,1,1,NULL,NULL),(24,100,NULL,NULL,1,2,NULL,NULL),(25,150,NULL,NULL,2,1,NULL,NULL),(26,100,NULL,NULL,2,2,NULL,NULL),(27,150,NULL,NULL,51,1,NULL,NULL),(28,100,NULL,NULL,51,2,NULL,NULL),(29,150,NULL,NULL,51,1,NULL,NULL),(30,100,NULL,NULL,51,2,NULL,NULL);
+/*!40000 ALTER TABLE `ticket_rate` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ticket_type`
+--
+
+DROP TABLE IF EXISTS `ticket_type`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ticket_type` (
+  `ticket_type_id` int(11) NOT NULL AUTO_INCREMENT,
+  `ticket_type` varchar(45) NOT NULL,
+  `ticket_type_count` int(11) NOT NULL,
+  `ticket_type_desc` varchar(250) DEFAULT NULL,
+  `created_date` datetime DEFAULT NULL,
+  `updated_date` datetime DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  PRIMARY KEY (`ticket_type_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ticket_type`
+--
+
+LOCK TABLES `ticket_type` WRITE;
+/*!40000 ALTER TABLE `ticket_type` DISABLE KEYS */;
+INSERT INTO `ticket_type` VALUES (1,'firstclass',150,NULL,NULL,NULL,NULL,NULL),(2,'secondclass',100,NULL,NULL,NULL,NULL,NULL),(3,'fourth',20,NULL,NULL,NULL,NULL,NULL);
+/*!40000 ALTER TABLE `ticket_type` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `timings`
+--
+
+DROP TABLE IF EXISTS `timings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `timings` (
+  `timings_id` int(11) NOT NULL AUTO_INCREMENT,
+  `timings` varchar(45) DEFAULT NULL,
+  `timings_desc` varchar(45) DEFAULT NULL,
+  `created_date` datetime DEFAULT NULL,
+  `updated_date` datetime DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  PRIMARY KEY (`timings_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `timings`
+--
+
+LOCK TABLES `timings` WRITE;
+/*!40000 ALTER TABLE `timings` DISABLE KEYS */;
+INSERT INTO `timings` VALUES (1,'12PM-1PM',NULL,NULL,NULL,NULL,NULL),(2,'1PM-4PM',NULL,NULL,NULL,NULL,NULL),(3,'5PM-8PM',NULL,NULL,NULL,NULL,NULL),(4,'9PM-12PM',NULL,NULL,NULL,NULL,NULL),(5,'11-11',NULL,NULL,NULL,NULL,NULL);
+/*!40000 ALTER TABLE `timings` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  `temp_pass` varchar(45) DEFAULT NULL,
+  `first_name` varchar(45) NOT NULL,
+  `last_name` varchar(45) DEFAULT NULL,
+  `email_address` varchar(45) NOT NULL,
+  `address` varchar(250) DEFAULT NULL,
+  `created_date` timestamp NULL DEFAULT NULL,
+  `updated_date` timestamp NULL DEFAULT NULL,
+  `user_role` int(11) NOT NULL,
+  `is_active` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`user_id`),
+  UNIQUE KEY `username_UNIQUE` (`username`),
+  UNIQUE KEY `email_address_UNIQUE` (`email_address`),
+  KEY `fk_user_user_role_idx` (`user_role`),
+  CONSTRAINT `fk_user_user_role` FOREIGN KEY (`user_role`) REFERENCES `user_role` (`role_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user`
+--
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (1,'sasi','asdf',NULL,'kumar','sasi','kumar@gmail.com','chennai','2015-11-27 11:53:55','2015-11-27 11:53:55',2,NULL),(2,'mani','mmmm',NULL,'mani','gandan','mani@gmal.com','bangalore','2015-11-27 11:53:55','2015-11-27 11:53:55',2,NULL),(3,'palani','pppp',NULL,'palani','raj','palani@gmail.com','palani','2015-11-27 11:53:55','2015-11-27 11:53:55',1,NULL),(4,'moorthi','mmmm',NULL,'morthi','john','morthi@gmail.com','ooty','2015-11-27 11:53:55','2015-11-27 11:53:55',1,NULL);
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user_role`
+--
+
+DROP TABLE IF EXISTS `user_role`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user_role` (
+  `role_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_role` varchar(45) NOT NULL,
+  `user_role_desc` varchar(45) DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  PRIMARY KEY (`role_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user_role`
+--
+
+LOCK TABLES `user_role` WRITE;
+/*!40000 ALTER TABLE `user_role` DISABLE KEYS */;
+INSERT INTO `user_role` VALUES (1,'1','user',NULL,NULL),(2,'2','admin',NULL,NULL);
+/*!40000 ALTER TABLE `user_role` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2015-12-22 19:19:00
